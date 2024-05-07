@@ -1,6 +1,6 @@
 const servisesSlider = new Swiper('.swiper-servises', {
     loop: true,
-    slidesPerView: 4,
+    slidesPerView: 3,
     spaceBetween: 3,
     keyboard: {
         enabled: true,
