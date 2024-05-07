@@ -1,0 +1,158 @@
+//.licenses {
+//  display: flex;
+//  flex-direction: column;
+//  padding: 110px 0 180px;
+//  background: url("../images/bg-licen.png");
+//
+//  .licenses__container {
+//    //width: 100%;
+//    border: 1px solid green;
+//    margin-top: -116px;
+//
+//    .title__wrapper {
+//      //position: relative;
+//      text-align: left;
+//      max-width: 600px;
+//      border: 1px solid green;
+//
+//
+//      h2 {
+//        margin: 0;
+//        text-transform: uppercase;
+//        text-align: left;
+//        //padding-left: 200px;
+//        position: relative;
+//        //margin-bottom: 50px;
+//        margin-top: -118px;
+//        margin-left: 40px;
+//      }
+//
+//      h2::before {
+//        position: absolute;
+//        content: '';
+//        background-image: url('./images/servesis/left-line.svg');
+//        top: 40%;
+//        left: 0px;
+//        width: 180px;
+//        height: 5px;
+//      }
+//
+//      h2::after {
+//        position: absolute;
+//        content: '';
+//        background-image: url('./images/servesis/right-line.svg');
+//        top: 40%;
+//        left: 560px;
+//        width: 180px;
+//        height: 5px;
+//      }
+//    }
+//
+//    .licenses__wrapper {
+//      border-radius: 30px;
+//      max-width: 945px;
+//      padding: 33px 121px 33px 39px;
+//      backdrop-filter: blur(25px);
+//      background: rgba(255, 255, 255, 0.5);
+//      margin-left: 155px;
+//      position: relative;
+//
+//      p {
+//        margin-bottom: 50px;
+//      }
+//
+//      a {
+//        display: flex;
+//        position: absolute;
+//        bottom: -10px;
+//        right: 128px;
+//        border-radius: 9px;
+//        padding: 17px 35px 17px 56px;
+//        font-size: 24px;
+//        text-transform: uppercase;
+//        color: #34c3ff;
+//        background: linear-gradient(319deg, #285681 0%, #0f3354 100%);
+//
+//        svg {
+//          margin-left: 21px;
+//          vertical-align: middle;
+//        }
+//      }
+//    }
+//  }
+//}
+
+.licenses {
+  padding: 110px 0 160px;
+  background: url("../images/bg-licen.png");
+
+  .licenses__container {
+    margin-top: -120px;
+    //max-width: 950px;
+    width: 100%;
+    margin-right: auto;
+    padding-left: 185px;
+
+    .title__wrapper {
+      margin-bottom: 80px;
+      text-align: left;
+
+        h2 {
+          margin: 0;
+          text-transform: uppercase;
+          text-align: left;
+          position: relative;
+        }
+
+        h2::before {
+          top: 40%;
+          left: -210px;
+          width: 180px;
+          height: 5px;
+        }
+
+        h2::after {
+          top: 40%;
+          left: 440px;
+          width: 180px;
+          height: 5px;
+        }
+      }
+    }
+
+      .licenses__wrapper {
+        border-radius: 30px;
+        max-width: 945px;
+        width: 100%;
+        padding: 33px 136px 33px 39px;
+        backdrop-filter: blur(25px);
+        background: rgba(255, 255, 255, 0.5);
+        position: relative;
+
+        span {
+          display: inline-block;
+          margin-bottom: 50px;
+          //width: 100%;
+          position: relative;
+          width: 790px;
+        }
+
+        a {
+          display: flex;
+          position: absolute;
+          bottom: -10px;
+          right: 128px;
+          border-radius: 9px;
+          padding: 17px 35px 17px 56px;
+          font-size: 24px;
+          text-transform: uppercase;
+          color: #34c3ff;
+          background: linear-gradient(319deg, #285681 0%, #0f3354 100%);
+
+          svg {
+            margin-left: 21px;
+            vertical-align: middle;
+          }
+        }
+      }
+  }

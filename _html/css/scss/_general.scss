@@ -1,0 +1,165 @@
+html,
+body {
+  //background-color: $color-white;
+  min-height: 100vh;
+  background-color: #eef2f5;
+}
+
+body {
+  font-family: $font-family-base;
+  color: $color-main;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: $font-family-base;
+  color: $color-main;
+  margin: 0 0 20px 0;
+  //margin: 0 0 0 0;
+  padding: 0;
+}
+
+h1, .h1 {
+  font-size: 40px;
+
+  @media #{$phone} {
+    font-size: 30px;
+  }
+}
+
+h2, .h2 {
+
+}
+
+h3, .h3 {
+
+}
+
+h4, .h4 {
+
+}
+
+h5, .h6 {
+
+}
+
+h6, .h6 {
+
+}
+
+.fancybox {
+  &__backdrop {
+    background: rgb(0 0 0 / 65%) !important;
+  }
+}
+
+@media #{$phone} {
+  #panel {
+    display: none;
+  }
+}
+
+
+a {
+  &:link,
+  &:visited {
+    text-decoration: none;
+    color: $color-main;
+  }
+
+  &:hover,
+  &:active {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+p {
+
+}
+
+.container {
+  width: 100%;
+  max-width: 1520px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0 auto;
+  border: 1px solid red;
+
+  @media #{$phone-mini} {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.none {
+  display: none;
+}
+
+//все title с псевдоэлементами скраев
+
+.title__wrapper {
+  //position: relative;
+  text-align: center;
+
+  h2 {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    font-weight: 700;
+    font-size: 50px;
+    //line-height: 0.44;
+    color: #244f77;
+
+  }
+
+  h2:after {
+    position: absolute;
+    content: '';
+    top: 43%;
+    left: 130px;
+    width: 200px;
+    height: 6px;
+    background: url("../images/title-right.svg") no-repeat;
+  }
+
+  h2:before {
+    position: absolute;
+    content: '';
+    top: 43%;
+    right: 110px;
+    width: 200px;
+    height: 5px;
+    background: url("../images/title-left2.svg") no-repeat;
+  }
+}

@@ -1,0 +1,111 @@
+.consultation {
+  position: relative;
+  z-index: 30;
+  padding: 110px 0 150px;
+  background: url("../images/bg-usor.svg") no-repeat left center/contain;
+
+.consultation__container{
+  background: url("../images/formbbg.png") no-repeat center/cover;
+  position: relative;
+  z-index: 20;
+  padding: 17px 35px;
+  border-radius: 40px;
+}
+
+  .consultation__form {
+    max-width: 750px;
+    width: 100%;
+    position: relative;
+    z-index: 300;
+
+    form {
+      display: inline-block;
+      flex-direction: column;
+      max-width: 720px;
+      width: 100%;
+
+      label {
+        display: block;
+        font-weight: 400;
+        font-size: 50px;
+        text-transform: uppercase;
+        color: #fff;
+        margin-bottom: 12px;
+
+        span{
+          font-family: $font-family-base;
+          font-weight: 400;
+          font-size: 50px;
+          text-transform: uppercase;
+          color: #34c3ff;
+        }
+      }
+
+      input[type="tel" i],
+      input[type="text" i]{
+        display: block;
+        margin: 0;
+        width: 100%;
+        padding: 13px 21px;
+        margin-bottom: 12px;
+        font-family: $font-family-title;
+        font-weight: 400;
+        font-size: 18px;
+        color: #fff;
+      }
+
+      input {
+        border: 1px solid transparent;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        background: transparent;
+        background: rgba(187, 231, 255, 0.1);
+        padding: 10px;
+      }
+
+      .span-warning  {
+        display: inline-block;
+        max-width: 330px;
+        font-family: $font-family-title;
+        font-weight: 500;
+        font-size: 12px;
+        text-align: right;
+        color: #eef2f9;
+        margin-left: 155px;
+        margin-right: 23px;
+      }
+
+      button {
+        display: inline-block;
+        margin-left: auto;
+        padding: 15px 23px 15px 56px;
+        font-weight: 700;
+        font-size: 24px;
+        text-transform: uppercase;
+        color: #34c3ff;
+        background: linear-gradient(319deg, #285681 0%, #0f3354 100%);
+        border: 1px solid transparent;
+        border-radius: 10px;
+        outline: none;
+
+        svg {
+          margin-left: 24px;
+          vertical-align: middle;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .foto {
+    background: url("../images/formbbgirl.png") no-repeat center/contain;
+    width: 800px;
+    height: 340px;
+    position: absolute;
+    z-index: 200;
+    top: -9%;
+    left: 30%;
+  }
+  .consultation__bg_right {
+  }
+}

@@ -1,0 +1,135 @@
+.customers {
+  padding: 60px 0;
+
+  .title__wrapper {
+    //position: relative;
+    text-align: center;
+    margin-bottom: 40px;
+
+    h2 {
+      display: inline-block;
+      position: relative;
+      text-align: center;
+      font-weight: 700;
+      font-size: 50px;
+      //line-height: 0.44;
+      color: #244f77;
+
+    }
+
+    h2:after {
+      position: absolute;
+      content: '';
+      top: 43%;
+      left: 280px;
+      width: 200px;
+      height: 6px;
+      background: url("../images/title-right.svg") no-repeat;
+    }
+
+    h2:before {
+      position: absolute;
+      content: '';
+      top: 43%;
+      right: 260px;
+      width: 200px;
+      height: 5px;
+      background: url("../images/title-left2.svg") no-repeat;
+    }
+  }
+
+  .customers__wrapper {
+    //background-color: #ffffff;
+    position: relative;
+
+    margin-bottom: 30px;
+
+
+    ul {
+      position: relative;
+      list-style-type: none;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      //align-items: end;
+      width: 100%;
+      gap: 30px;
+      padding: 32px 96px 38px;
+      //background: rgba(250, 250, 250, 1);
+      //backdrop-filter: blur(5px);
+      background-color: #ca5454;
+      border-radius: 50px;
+
+
+
+      li {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+      }
+
+      //li:nth-of-type(1n)::before {
+      //  content: '';
+      //  position: absolute;
+      //  top: 112%;
+      //  left: 100%;
+      //  background: url("../images/razdel.svg") no-repeat;
+      //  width: 100%;
+      //  height: 200px;
+      //  z-index: 1000;
+      //}
+
+      li:nth-of-type(-n+3)::after {
+        content: '';
+        position: absolute;
+        top: 40%;
+        left: 51%;
+        background: url("../images/razdel.svg") no-repeat;
+        width: 302px;
+        height: 200px;
+        z-index: 1000;
+      }
+    }
+  }
+
+  .customers__wrapper::after{
+    content: '';
+    position: absolute;
+    top: 23%;
+    right: -10%;
+    background: url("../images/razdel.svg") no-repeat;
+    //background-color: #1c7430;
+    width: 302px;
+    height: 200px;
+    z-index: 1000;
+  }
+
+  .customers__wrapper::before{
+    content: '';
+    position: absolute;
+    top: 23%;
+    left: -10%;
+    background: url("../images/razdel.svg") no-repeat;
+    width: 302px;
+    height: 200px;
+    z-index: 1000;
+  }
+
+  .customers__btn {
+    text-align: center;
+    a {
+      display: inline-block;
+      align-items: baseline;
+      font-weight: 700;
+      font-size: 20px;
+      color: #244f77;
+
+      svg {
+        margin-left: 20px;
+        color: #56a2e9;
+        vertical-align: middle;
+      }
+    }
+  }
+}
