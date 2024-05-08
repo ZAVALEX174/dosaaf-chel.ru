@@ -1,5 +1,6 @@
 .hero-slider {
-  width: 100vw;
+  //width: 100vw;
+  width: 100%;
   overflow: hidden;
   position: relative;
   display: flex;
@@ -16,7 +17,9 @@
   }
 
   .swiper {
-    width: 100%;
+    //width: 100%;
+    width: 1920px;
+    overflow: hidden;
     height: 100%;
     position: relative;
     z-index: 30;
@@ -64,21 +67,23 @@
       }
 
       a {
-        font-family: $font-family-base;
-        font-weight: 700;
-        font-size: 24px;
-        text-transform: uppercase;
         color: #34c3ff;
-        padding: 15px 35px 15px 56px;
-        border-radius: 9px;
-        background: linear-gradient(319deg, #285681 0%, #0f3354 100%);
-        margin-bottom: 20px;
-        margin-left: auto;
+        display: inline-block;
+        //font-family: $font-family-base;
+        //font-weight: 700;
+        //font-size: 24px;
+        //text-transform: uppercase;
+        //color: #34c3ff;
+        //padding: 15px 35px 15px 56px;
+        //border-radius: 9px;
+        //background: linear-gradient(319deg, #285681 0%, #0f3354 100%);
+        //margin-bottom: 20px;
+        //margin-left: auto;
 
-        svg {
-          margin-left: 21px;
-          vertical-align: middle;
-        }
+        //svg {
+        //  margin-left: 21px;
+        //  vertical-align: middle;
+        //}
       }
     }
 

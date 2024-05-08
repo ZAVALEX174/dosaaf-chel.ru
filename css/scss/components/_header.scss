@@ -107,6 +107,7 @@
   }
 
   &__logo {
+    z-index: 10;
     margin-top: -2px;
     grid-area: logo;
     position: relative;
@@ -268,7 +269,6 @@
           }
 
           .icon-email {
-            transform: rotate(45deg);
             transition: 0.3s;
           }
         }
@@ -330,7 +330,6 @@
             transition: 0.3s ease-in;
 
             .icon-call {
-              transform: rotate(45deg);
             }
 
             span {
@@ -400,10 +399,6 @@
           }
 
           .contacts__link_social:hover {
-            border-radius: 30px;
-            height: 38px;
-            line-height: 38px;
-            padding: 0 20px;
             box-shadow: inset 0 4px 30px 0 rgba(0, 0, 0, 0.8);
             background: rgba(19, 19, 19, 0.8);
 
@@ -417,7 +412,7 @@
   }
   //
   &__grid2 {
-    position: relative;
+    z-index: 5;
       grid-area: down;
       align-self: center;
       padding: 15px 35px 10px 35px;
@@ -495,7 +490,22 @@
             }
 
             .submenu__list {
+              //display: none;
               list-style-type: none;
+              display: flex;
+              flex-direction: column;
+              //height: 0;
+              position: absolute;
+              left: 0;
+              right: 0;
+              bottom: -270px;
+              box-shadow: 0 4px 60px 0 rgba(0, 0, 0, 0.15);
+              background: rgba(25, 33, 50, 0.4);
+              backdrop-filter: blur(30px);
+              padding: 20px 10px 20px 155px;
+              border-radius: 0 0 20px 20px;
+              transition: 0.6s ease-in;
+
 
               .submenu__item {
                 font-weight: 400;
@@ -505,11 +515,23 @@
 
                 .submenu__link {
                   color: #fff;
+                  transition: 0.3s ease-in;
+                }
+
+                .submenu__link:hover {
+                  transition: 0.3s ease-in;
+                  color: #56a2e9;
                 }
 
                   .active {
+                    transition: 0.3s ease-in;
                     color: #56a2e9;
                   }
+
+                .active:hover {
+                  transition: 0.3s ease-in;
+                  color: #fff;
+                }
 
               }
             }
