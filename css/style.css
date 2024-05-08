@@ -818,7 +818,7 @@ a {
   }
 }
 .hero-slider .swiper {
-  width: 1920px;
+  width: 100%;
   overflow: hidden;
   height: 100%;
   position: relative;
@@ -1450,7 +1450,6 @@ a {
 .footer__wrapper-contact {
   position: relative;
   grid-area: cont;
-  background: #b4eded;
   display: flex;
   justify-content: flex-end;
 }
@@ -1493,11 +1492,22 @@ a {
   color: #56a2e9;
 }
 .footer__wrapper-contact .footer__email .footer__email-list .btn__social_footer {
-  padding: 14px 22px;
-  backdrop-filter: blur(30px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 26px;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 21px;
   box-shadow: inset 0 4px 30px 0 rgba(0, 0, 0, 0.3);
   background: rgba(19, 19, 19, 0.3);
-  border-radius: 26px;
+}
+.footer__wrapper-contact .footer__email .footer__email-list .btn__social_footer:hover {
+  box-shadow: inset 0 4px 30px 0 rgba(0, 0, 0, 0.8);
+  background: rgba(19, 19, 19, 0.8);
+}
+.footer__wrapper-contact .footer__email .footer__email-list .btn__social_footer:hover svg {
+  color: #34c3ff;
 }
 .footer__wrapper-contact .footer__email .footer__email-list li:nth-of-type(3) {
   margin-bottom: 12px;
@@ -1800,7 +1810,7 @@ a {
   stroke-width: 2;
 }
 
-.btn:after {
+.btn-arr:after {
   content: "";
   width: 14px;
   height: 14px;
@@ -1812,7 +1822,7 @@ a {
   margin-left: 21px;
 }
 
-.btn:hover::after {
+.btn-arr:hover::after {
   content: "";
   width: 14px;
   height: 14px;

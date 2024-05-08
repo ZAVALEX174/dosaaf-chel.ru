@@ -12,6 +12,6 @@ submenuBtn.addEventListener('mouseover', () => {
 
 headerMenu.addEventListener('mouseleave', () => {
     backDropMenu.style.display = 'none';
-    headerContainer.style.borderRadius = '20px 20px 0 0';
+    headerContainer.style.borderRadius = '20px';
     // backDropMenu.style.bottom = '0';
 })

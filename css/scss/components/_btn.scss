@@ -297,7 +297,11 @@
   }
 }
 
-.btn:after {
+.btn-arr {
+
+}
+
+.btn-arr:after {
   content: '';
   width: 14px;
   height: 14px;
@@ -309,7 +313,7 @@
   margin-left: 21px;
 }
 
-.btn:hover::after {
+.btn-arr:hover::after {
   content: '';
   width: 14px;
   height: 14px;
