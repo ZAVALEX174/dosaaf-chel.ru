@@ -306,8 +306,8 @@
   }
 }
 
-.btn-arr {
-}
+// .btn-arr {
+// }
 
 .btn-arr:after {
   content: '';
@@ -325,11 +325,106 @@
   }
 }
 
+
 .btn-arr:hover::after {
   content: '';
   width: 14px;
   height: 14px;
   background-image: url('../images/btn-arr-right.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  display: inline-block;
+  margin-left: 21px;
+
+  @media #{$laptop} {
+    margin-left: 10px;
+  }
+}
+
+.btn__white {
+  margin-right: auto;
+  height: 50px;
+  line-height: 50px;
+  text-decoration: none;
+  border: none;
+  border-radius: 9px;
+  padding: 0 20px 0 56px;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+  display: inline-block;
+  background: linear-gradient(62deg, #285681 0%, #0f3354 100%);
+  position: relative;
+  transition: 0.3s all linear;
+  color: #34c3ff;
+  cursor: pointer;
+  white-space: nowrap;
+  outline: none;
+
+  @media #{$notebook} {
+    padding: 0 15px;
+  }
+
+  @media #{$laptop} {
+    padding: 0 15px 0 25px;
+  }
+
+  @media screen and (max-width: 1130px) {
+    padding: 0 15px 0 22px;
+    height: 40px;
+    line-height: 44px;
+    font-size: 18px;
+  }
+
+  &:hover {
+    background: linear-gradient(319deg, #285681 0%, #0f3354 100%);
+    transition: 0.3s linear;
+  }
+
+  &:active {
+    box-shadow: 0 4px 25px 0 rgba(14, 50, 84, 0.44);
+  }
+}
+
+  .btn__white:after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background-image: url('../images/btn-arr-right-white.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    display: inline-block;
+    margin-left: 21px;
+
+    @media #{$laptop} {
+      margin-left: 10px;
+    }
+  }
+
+.btn__white:active::after {
+  content: '';
+  width: 14px;
+  height: 14px;
+  background-image: url('../images/btn-arr-right-white.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  display: inline-block;
+  margin-left: 21px;
+
+  @media #{$laptop} {
+    margin-left: 10px;
+  }
+}
+
+
+.btn__white:hover::after {
+  content: '';
+  width: 14px;
+  height: 14px;
+  background-image: url('../images/arr-right-defolt.svg');
   background-repeat: no-repeat;
   background-position: center;
   position: relative;

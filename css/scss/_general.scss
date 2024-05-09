@@ -127,39 +127,33 @@ a {
 }
 
 //все title с псевдоэлементами скраев
+.title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 50px;
+  //line-height: 0.44;
+  color: #244f77;
+  margin-bottom: 45px;
+}
+.title::before {
+  position: relative;
+  content: "";
+  top: 42%;
+  right: 3%;
+  width: 180px;
+  height: 5px;
+  background: url("../images/title--left2.svg") no-repeat;
+}
 
-.title__wrapper {
-  //position: relative;
-  text-align: center;
-
-  h2 {
-    display: inline-block;
-    position: relative;
-    text-align: center;
-    font-weight: 700;
-    font-size: 50px;
-    //line-height: 0.44;
-    color: #244f77;
-
-  }
-
-  h2:after {
-    position: absolute;
-    content: '';
-    top: 43%;
-    left: 130px;
-    width: 200px;
-    height: 6px;
-    background: url("../images/title-right.svg") no-repeat;
-  }
-
-  h2:before {
-    position: absolute;
-    content: '';
-    top: 43%;
-    right: 110px;
-    width: 200px;
-    height: 5px;
-    background: url("../images/title-left2.svg") no-repeat;
-  }
+.title::after {
+  position: relative;
+  content: "";
+  top: 42%;
+  left: 3%;
+  width: 180px;
+  height: 5px;
+  background: url("../images/title-right.svg") no-repeat;
 }
