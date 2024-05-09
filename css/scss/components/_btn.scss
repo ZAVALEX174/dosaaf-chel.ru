@@ -22,15 +22,26 @@
   white-space: nowrap;
   outline: none;
 
-  @media #{$laptop} {
+  @media #{$notebook} {
     padding: 0 15px;
   }
 
+  @media #{$laptop} {
+    padding: 0 15px 0 25px;
+  }
+
+  //@media screen and (max-width: 1130px) {
+  //  padding: 0 10px;
+  //  height: 40px;
+  //  line-height: 38px;
+  //  font-size: 14px;
+  //}
+
   @media screen and (max-width: 1130px) {
-    padding: 0 10px;
+    padding: 0 15px 0 22px;
     height: 40px;
-    line-height: 38px;
-    font-size: 14px;
+    line-height: 44px;
+    font-size: 18px;
   }
 
   &:hover {
@@ -311,6 +322,10 @@
   position: relative;
   display: inline-block;
   margin-left: 21px;
+
+  @media #{$laptop} {
+    margin-left: 10px;
+  }
 }
 
 .btn-arr:hover::after {
@@ -323,4 +338,10 @@
   position: relative;
   display: inline-block;
   margin-left: 21px;
+
+
+@media #{$laptop} {
+  margin-left: 10px;
+}
+
 }
