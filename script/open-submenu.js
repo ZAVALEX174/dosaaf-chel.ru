@@ -7,11 +7,20 @@ console.log(submenuBtn, backDropMenu, headerContainer, headerMenu)
 submenuBtn.addEventListener('mouseover', () => {
     backDropMenu.style.display = 'flex';
     // backDropMenu.style.bottom = '-270px';
-    headerContainer.style.borderRadius = '20px 20px 0 0';
+    headerContainer.classList.remove('header__container');
+    headerContainer.classList.add('header__container_rectangle');
+    // headerContainer.style.borderRadius = '20px 20px 0 0';
+    // headerContainer.style.borderRadius = '0';
+
+
+
 })
 
 headerMenu.addEventListener('mouseleave', () => {
     backDropMenu.style.display = 'none';
-    headerContainer.style.borderRadius = '20px';
+    headerContainer.classList.remove('header__container_rectangle');
+    headerContainer.classList.add('header__container');
+    // headerContainer.style.borderRadius = '20px';
     // backDropMenu.style.bottom = '0';
+
 })
