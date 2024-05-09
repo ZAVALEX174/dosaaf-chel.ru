@@ -1,16 +1,16 @@
 .footer {
-  background: url("../images/bg-footer.png") no-repeat center/cover;
+  background: url('../images/bg-footer.png') no-repeat center/cover;
   padding: 0px 0 10px;
   position: relative;
 
   &__container {
-    display:  grid;
+    display: grid;
     grid-template-columns: 3fr 493px 205px;
     grid-template-rows: 57px 1fr;
     grid-template-areas:
-    'nav map cont'
-    'logo map cont'
-    'f-copy f-copy dev';
+      'nav map cont'
+      'logo map cont'
+      'f-copy f-copy dev';
   }
 
   &__nav {
@@ -77,11 +77,10 @@
           .footer__nav-link:hover:after {
             width: 140%;
             color: #34c3ff;
-
           }
 
           .link-hov {
-            color:#fff;
+            color: #fff;
             transition: 0.3s;
           }
 
@@ -99,66 +98,77 @@
   }
 
   &__wrapper-company {
+    // grid-area: logo;
+    // padding-top: 19px;
+    // position: relative;
+    display: grid;
     grid-area: logo;
-    //background: #eccf62;
     padding-top: 19px;
     position: relative;
+    grid-auto-columns: 130px 350px;
+    grid-template-rows: 50px 80px;
+    grid-template-areas:
+      'logo title-footer'
+      'log title-footer';
 
-      a {
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 125%;
-        color: #bcc1ca;
+    a {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 125%;
+      color: #bcc1ca;
+      grid-area: logo;
 
-        .footer__logo_title {
-          position: absolute;
-          top: 20px;
-          left: 130px;
-          max-width: 322px;
+      .footer__logo_title {
+        position: absolute;
+        top: 20px;
+        left: 130px;
+        max-width: 322px;
 
-          .logo-active {
-            font-size: 30px;
-            color: #fc0;
-          }
+        .logo-active {
+          font-size: 30px;
+          color: #fc0;
         }
       }
+    }
 
-      .footer__address {
-        display: flex;
-        flex-direction: column;
-        max-width: 400px;
+    .footer__address {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      max-width: 400px;
+      grid-area: title-footer;
 
-        span {
-          display: block;
-          padding-left: 28px;
-          font-family: $font-family-title;
-          font-weight: 500;
-          font-size: 14px;
-          color: #828d9c;
-          font-style: normal;
-        }
+      span {
+        display: block;
+        padding-left: 28px;
+        font-family: $font-family-title;
+        font-weight: 500;
+        font-size: 14px;
+        color: #828d9c;
+        font-style: normal;
+      }
 
-        svg {
-          display: inline-block;
-          margin-right: 10px;
-        }
+      svg {
+        display: inline-block;
+        margin-right: 10px;
+      }
 
-        p {
+      p {
+        display: inline-block;
+        font-weight: 700;
+        font-size: 20px;
+        color: #fff;
+
+        .grey {
+          font-family: $font-family-base;
           display: inline-block;
           font-weight: 700;
           font-size: 20px;
-          color: #fff;
-
-          .grey {
-            font-family: $font-family-base;
-            display: inline-block;
-            font-weight: 700;
-            font-size: 20px;
-            color: #b1b1b1;
-            padding-left: 0;
-          }
+          color: #b1b1b1;
+          padding-left: 0;
         }
       }
+    }
   }
 
   &__wrapper-contact {
@@ -167,7 +177,6 @@
     //background: #b4eded;
     display: flex;
     justify-content: flex-end;
-
 
     .footer__email {
       padding-top: 18px;
@@ -178,7 +187,6 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-
 
         li {
           padding: 0;
@@ -206,12 +214,12 @@
             }
           }
 
-            .blue {
-              font-family: $font-family-base;
-              font-weight: 700;
-              font-size: 18px;
-              color: #56a2e9;
-            }
+          .blue {
+            font-family: $font-family-base;
+            font-weight: 700;
+            font-size: 18px;
+            color: #56a2e9;
+          }
         }
 
         .btn__social_footer {
@@ -234,8 +242,6 @@
             color: #34c3ff;
           }
         }
-
-
 
         li:nth-of-type(3) {
           margin-bottom: 12px;
@@ -263,20 +269,19 @@
       font-size: 16px;
       color: #40464e;
     }
-
   }
 
   &__logo-dev {
     display: grid;
     grid-area: dev;
     position: relative;
+    justify-items: end;
   }
-
 }
 
 .footer::before {
   position: absolute;
-  content: "";
+  content: '';
   top: 0;
   left: 0;
   right: 0;

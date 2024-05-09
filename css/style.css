@@ -1431,15 +1431,20 @@ a {
   color: #fc0;
 }
 .footer__wrapper-company {
+  display: grid;
   grid-area: logo;
   padding-top: 19px;
   position: relative;
+  grid-auto-columns: 130px 350px;
+  grid-template-rows: 50px 80px;
+  grid-template-areas: "logo title-footer" "log title-footer";
 }
 .footer__wrapper-company a {
   font-weight: 700;
   font-size: 20px;
   line-height: 125%;
   color: #bcc1ca;
+  grid-area: logo;
 }
 .footer__wrapper-company a .footer__logo_title {
   position: absolute;
@@ -1454,7 +1459,9 @@ a {
 .footer__wrapper-company .footer__address {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   max-width: 400px;
+  grid-area: title-footer;
 }
 .footer__wrapper-company .footer__address span {
   display: block;
@@ -1569,6 +1576,7 @@ a {
   display: grid;
   grid-area: dev;
   position: relative;
+  justify-items: end;
 }
 
 .footer::before {
@@ -1925,6 +1933,4 @@ a {
 @import "components/opd";
 @import "components/spoiler";
 @import "components/order-cart";
-@import "components/basket-top";*/
-
-/*# sourceMappingURL=style.css.map */
+@import "components/basket-top";*//*# sourceMappingURL=style.css.map */
