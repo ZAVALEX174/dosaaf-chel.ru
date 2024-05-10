@@ -141,19 +141,19 @@ a {
 .title::before {
   position: relative;
   content: "";
-  top: 42%;
+  top: -3px;
   right: 3%;
   width: 180px;
-  height: 5px;
+  height: 6px;
   background: url("../images/title--left2.svg") no-repeat;
 }
 
 .title::after {
   position: relative;
   content: "";
-  top: 42%;
+  top: -3px;
   left: 3%;
   width: 180px;
-  height: 5px;
+  height: 6px;
   background: url("../images/title-right.svg") no-repeat;
 }

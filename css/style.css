@@ -142,20 +142,20 @@ a {
 .title::before {
   position: relative;
   content: "";
-  top: 42%;
+  top: -3px;
   right: 3%;
   width: 180px;
-  height: 5px;
+  height: 6px;
   background: url("../images/title--left2.svg") no-repeat;
 }
 
 .title::after {
   position: relative;
   content: "";
-  top: 42%;
+  top: -3px;
   left: 3%;
   width: 180px;
-  height: 5px;
+  height: 6px;
   background: url("../images/title-right.svg") no-repeat;
 }
 
@@ -1002,6 +1002,8 @@ a {
 .hero-slider .swiper .swiper-slide .hero-slider__card a {
   color: #34c3ff;
   display: inline-block;
+  align-self: flex-start;
+  max-width: 200px;
 }
 .hero-slider .swiper .swiper-pagination {
   position: absolute;
@@ -1085,35 +1087,54 @@ a {
 }
 .servises .servises__container {
   width: 100%;
+  position: relative;
+}
+.servises .servises__container .servises__title {
+  margin-bottom: 68px;
+}
+.servises .servises__container .swiper-button-next {
+  position: absolute;
+  top: 61%;
+  right: -2%;
+  background-color: #e6700d;
+  z-index: 99999999;
+}
+.servises .servises__container .swiper-button-next::after {
+  display: none;
+}
+.servises .servises__container .swiper-button-prev {
+  position: absolute;
+  top: 61%;
+  left: -2%;
+  background-color: #e6700d;
+  z-index: 99999999;
+}
+.servises .servises__container .swiper-button-prev::after {
+  display: none;
 }
 .servises .servises__container .servises__wrapper {
-  max-width: 1600px;
+  max-width: 1500px;
+  margin-bottom: 48px;
 }
 .servises .servises__container .servises__wrapper .swiper-servises {
   width: 100%;
   height: 300px;
   position: relative;
 }
-.servises .servises__container .servises__wrapper .swiper-servises .swiper-button-next {
-  position: absolute;
-  top: 42%;
-  right: 0;
-}
-.servises .servises__container .servises__wrapper .swiper-servises .swiper-button-next::after {
-  display: none;
-}
-.servises .servises__container .servises__wrapper .swiper-servises .swiper-button-prev {
-  position: absolute;
-  top: 42%;
-  left: 0;
-}
-.servises .servises__container .servises__wrapper .swiper-servises .swiper-button-prev::after {
-  display: none;
+.servises .servises__container .servises__wrapper .swiper-servises .swiper-wrapper .swiper-slide {
+  cursor: pointer;
 }
 .servises .servises__container .servises__wrapper .swiper-servises .swiper-wrapper .swiper-slide img {
   width: 100%;
-  height: 260px;
+  height: 370px;
   object-fit: contain;
+  object-position: center;
+  transition: transform 0.9s linear;
+  position: relative;
+}
+.servises .servises__container .servises__wrapper .swiper-servises .swiper-wrapper .swiper-slide img:hover {
+  transform: translateY(-20px);
+  transition: 0.9s linear;
 }
 .servises .servises__container a {
   display: block;
@@ -1127,7 +1148,7 @@ a {
 }
 
 .about {
-  padding: 60px 0;
+  padding: 110px 0;
   background-image: url("../images/bg-about.png");
   background-repeat: no-repeat;
   background-position: left 40%;
@@ -1309,6 +1330,7 @@ a {
   max-width: 790px;
 }
 .licenses .licenses__wrapper .licenses__btn-white {
+  max-width: 200px;
   position: absolute;
   color: #34c3ff;
   display: inline-block;
@@ -1662,7 +1684,6 @@ a {
 }
 
 .btn {
-  margin-right: auto;
   height: 50px;
   line-height: 50px;
   text-decoration: none;
@@ -1966,7 +1987,6 @@ a {
 }
 
 .btn__white {
-  margin-right: auto;
   height: 50px;
   line-height: 50px;
   text-decoration: none;
