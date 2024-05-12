@@ -46,6 +46,8 @@
           }
 
             li {
+              //display: flex;
+              //flex-direction: column;
               width: calc((100% - 12px) / 4);
               //border: 1px solid orange;
               text-align: center;
@@ -55,8 +57,19 @@
                 width: calc((100% - 8px) / 3);
               }
 
-              @media #{$tablet-mini} {
+              @media #{$tablet} {
                 width: calc((100% - 4px) / 2);
+              }
+
+              .text {
+                padding-block: 10px;
+                font-weight: 400;
+                font-size: 18px;
+                color: #b9c0ca;
+
+                @media #{$laptop_s} {
+                  display: none;
+                }
               }
 
               img {
@@ -72,7 +85,7 @@
             position: absolute;
             left: -152px;
             bottom: -105px;
-            width: 200px;
+            width: 300px;
             height: 200px;
             background: url("../images/line.png") no-repeat;
           }
@@ -80,11 +93,41 @@
           li:not(:nth-child(n+5))::after {
             content: '';
             position: absolute;
-            right: -52px;
+            right: -150px;
             bottom: -105px;
-            width: 200px;
+            width: 300px;
             height: 200px;
             background: url("../images/line.png") no-repeat;
+          }
+
+          li:not(:nth-child(n+6))::after {
+            @media #{$laptop} {
+            content: '';
+            position: absolute;
+            right: -150px;
+            bottom: -105px;
+            width: 300px;
+            height: 200px;
+            background: url("../images/line.png") no-repeat;
+            }
+          }
+
+          @media #{$laptop} {
+            li:first-of-type::before {
+              display: none;
+            }
+            li:nth-child(3)::after {
+              display: none;
+            }
+          }
+
+          @media #{$tablet} {
+            li:nth-child(2n + 2)::after {
+              display: none;
+            }
+            li:nth-child(3)::after {
+              display: flex;
+            }
           }
         }
     }
