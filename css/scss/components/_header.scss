@@ -1,6 +1,5 @@
 .header {
   padding-top: 9px;
-  //background-color: #5a6268;
   position: relative;
   z-index: 100;
 
@@ -79,7 +78,6 @@
     }
   }
 
-  /////////////////////
   &__container_rectangle {
     // display: none;
     position: relative;
@@ -132,10 +130,8 @@
     right: 0;
     backdrop-filter: blur(30px);
     border-radius: 20px 20px 0 0;
-    // border-radius: 0;   
   }
 
-  //////////////////
   .burger {
     width: 32px;
     height: 14px;

@@ -19,15 +19,21 @@ body {
 * {
   box-sizing: border-box;
 
-  //outline: 1px solid coral !important;
+  // outline: 1px solid coral !important;
 }
 
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
   font-family: $font-family-base;
   color: $color-main;
   margin: 0 0 20px 0;
@@ -35,7 +41,8 @@ h6, .h6 {
   padding: 0;
 }
 
-h1, .h1 {
+h1,
+.h1 {
   font-size: 40px;
 
   @media #{$phone} {
@@ -43,24 +50,24 @@ h1, .h1 {
   }
 }
 
-h2, .h2 {
-
+h2,
+.h2 {
 }
 
-h3, .h3 {
-
+h3,
+.h3 {
 }
 
-h4, .h4 {
-
+h4,
+.h4 {
 }
 
-h5, .h6 {
-
+h5,
+.h6 {
 }
 
-h6, .h6 {
-
+h6,
+.h6 {
 }
 
 .fancybox {
@@ -74,7 +81,6 @@ h6, .h6 {
     display: none;
   }
 }
-
 
 a {
   &:link,
@@ -91,7 +97,6 @@ a {
 }
 
 p {
-
 }
 
 .container {
@@ -143,12 +148,12 @@ a {
 
 .title::before {
   position: relative;
-  content: "";
+  content: '';
   top: -3px;
   right: 3%;
   width: 180px;
   height: 6px;
-  background: url("../images/title-right.svg") no-repeat;
+  background: url('../images/title-right.svg') no-repeat;
   transform: rotate(180deg);
 
   @media #{$laptop_s} {
@@ -164,12 +169,12 @@ a {
 
 .title::after {
   position: relative;
-  content: "";
+  content: '';
   top: -3px;
   left: 3%;
   width: 180px;
   height: 6px;
-  background: url("../images/title-right.svg") no-repeat;
+  background: url('../images/title-right.svg') no-repeat;
 
   @media #{$laptop_s} {
     width: 100px;
