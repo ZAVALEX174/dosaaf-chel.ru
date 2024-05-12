@@ -1,28 +1,27 @@
 .licenses {
   padding: 110px 0 160px;
-  background: url("../images/bg-licen.png");
+  background: url("../images/bg-licen.png") no-repeat center/cover;
 
   .licenses__container {
     margin-top: -120px;
     //max-width: 950px;
     width: 100%;
     margin-right: auto;
-
   }
+
     .title__left {
      display: flex;
      align-items: center;
      justify-content: flex-start;
       margin-bottom: 75px;
+      padding-left: 60px;
    }
-
 
       .licenses__wrapper {
         margin-left: 10%;
         margin-bottom: 25px;
         border-radius: 30px;
         max-width: 945px;
-        width: 100%;
         padding: 33px 136px 33px 39px;
         backdrop-filter: blur(25px);
         background: rgba(255, 255, 255, 0.5);
@@ -43,7 +42,6 @@
           display: inline-block;
           bottom: -5%;
           right: 136px;
-
 
           .licenses__btn-white:before {
             color: #fff;
