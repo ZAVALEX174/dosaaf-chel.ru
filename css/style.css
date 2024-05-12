@@ -1331,6 +1331,7 @@ a {
   cursor: pointer;
   position: relative;
   z-index: 200;
+  border: 1px solid #d2d7df;
 }
 .about .about__container .about__wrapper .about__btn svg {
   color: #56a2e9;
@@ -1344,7 +1345,7 @@ a {
   }
 }
 .about .about__container .about__wrapper .about__btn:hover {
-  color: #56A2E9;
+  color: #56a2e9;
   transition: 0.3s ease-in;
 }
 @media screen and (max-width: 1366px) {
@@ -2349,7 +2350,7 @@ a {
 .button-go-up {
   background: transparent;
   position: fixed;
-  top: 50%;
+  top: 65%;
   right: 0;
   z-index: 100;
   display: none;
@@ -2423,6 +2424,4 @@ a {
 @import "components/opd";
 @import "components/spoiler";
 @import "components/order-cart";
-@import "components/basket-top";*/
-
-/*# sourceMappingURL=style.css.map */
+@import "components/basket-top";*//*# sourceMappingURL=style.css.map */
