@@ -192,16 +192,31 @@ a {
   }
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .header {
   padding-top: 9px;
-  position: relative;
-  z-index: 100;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 @media screen and (max-width: 1024px) {
   .header {
     padding-top: 0;
     margin-top: 0;
-    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -217,7 +232,7 @@ a {
 .header__container {
   position: relative;
   width: 100%;
-  border-radius: 20px;
+  border-radius: 20px 20px 20px 20px;
   display: grid;
   grid-gap: 5px 0;
   grid-template-columns: 130px 5fr 1fr;
@@ -643,6 +658,7 @@ a {
   align-self: center;
   padding: 15px 35px 7px 35px;
   max-width: 1176px;
+  height: 100%;
   border-radius: 80px 80px 0 0;
   box-shadow: inset 0 4px 30px 0 rgba(0, 0, 0, 0.3);
   background: rgba(19, 19, 19, 0.3);
@@ -918,7 +934,7 @@ a {
   overflow: hidden;
   position: relative;
   display: flex;
-  margin-top: -125px;
+  margin-top: -7px;
 }
 .hero-slider .hero-slider__wrapper {
   position: relative;
@@ -1205,7 +1221,7 @@ a {
 }
 .servises .servises__container .servises__wrapper .swiper-servises {
   width: 100%;
-  height: 300px;
+  height: 380px;
   position: relative;
 }
 .servises .servises__container .servises__wrapper .swiper-servises .swiper-wrapper .swiper-slide {
@@ -1680,31 +1696,42 @@ a {
 }
 
 .consultation {
-  position: relative;
-  z-index: 30;
-  padding: 110px 0 150px;
-  background: url("../images/bg-usor.svg") no-repeat left center/contain;
+  padding: 52px 0 94px;
 }
 .consultation .consultation__container {
-  background: url("../images/formbbg.png") no-repeat center/cover;
+  padding: 122px 0 122px 61px;
+  display: flex;
+  width: 100%;
   position: relative;
-  z-index: 20;
-  padding: 17px 35px;
+  z-index: 800;
+}
+.consultation .consultation__container .consultation__bg {
+  position: absolute;
+  background: url("../images/consultation/bg-usor.svg") no-repeat left/contain;
+  top: 0;
+  left: 0;
+  width: 668px;
+  height: 558px;
+  z-index: 900;
+}
+.consultation .consultation__container .consultation__form {
+  padding: 35px 50px 17px 36px;
+  background: url("../images/consultation/osnBg.png") no-repeat left/cover;
+  display: flex;
+  align-items: center;
+  max-width: 1500px;
+  width: 100%;
   border-radius: 40px;
+  border: 1px solid green;
 }
-.consultation .consultation__form {
-  max-width: 750px;
-  width: 100%;
+.consultation .consultation__container .consultation__form form {
   position: relative;
-  z-index: 300;
-}
-.consultation .consultation__form form {
-  display: inline-block;
+  z-index: 1000;
+  display: flex;
   flex-direction: column;
-  max-width: 720px;
   width: 100%;
 }
-.consultation .consultation__form form label {
+.consultation .consultation__container .consultation__form form label {
   display: block;
   font-weight: 400;
   font-size: 50px;
@@ -1712,16 +1739,21 @@ a {
   color: #fff;
   margin-bottom: 12px;
 }
-.consultation .consultation__form form label span {
+.consultation .consultation__container .consultation__form form label span {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-size: 50px;
   text-transform: uppercase;
   color: #34c3ff;
 }
-.consultation .consultation__form form input[type=tel i],
-.consultation .consultation__form form input[type=text i] {
-  display: block;
+.consultation .consultation__container .consultation__form form input {
+  background: transparent;
+  display: inline-flex;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background: rgba(187, 231, 255, 0.1);
+  max-width: 714px;
   margin: 0;
   width: 100%;
   padding: 13px 21px;
@@ -1731,15 +1763,20 @@ a {
   font-size: 18px;
   color: #fff;
 }
-.consultation .consultation__form form input {
-  border: 1px solid transparent;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  background: transparent;
-  background: rgba(187, 231, 255, 0.1);
-  padding: 10px;
+@media screen and (max-width: 1280px) {
+  .consultation .consultation__container .consultation__form form input {
+    width: 568px;
+  }
 }
-.consultation .consultation__form form .span-warning {
+.consultation .consultation__container .consultation__form form input::before {
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(15px);
+}
+.consultation .consultation__container .consultation__form form .span-warning {
   display: inline-block;
   max-width: 330px;
   font-family: "Gilroy", sans-serif;
@@ -1750,33 +1787,33 @@ a {
   margin-left: 155px;
   margin-right: 23px;
 }
-.consultation .consultation__form form button {
-  display: inline-block;
-  margin-left: auto;
-  padding: 15px 23px 15px 56px;
-  font-weight: 700;
-  font-size: 24px;
-  text-transform: uppercase;
-  color: #34c3ff;
-  background: linear-gradient(319deg, #285681 0%, #0f3354 100%);
-  border: 1px solid transparent;
-  border-radius: 10px;
-  outline: none;
+.consultation .consultation__container .consultation__form form a {
+  display: inline-flex;
+  align-items: center;
+  max-width: 200px;
 }
-.consultation .consultation__form form button svg {
-  margin-left: 24px;
-  vertical-align: middle;
-  color: white;
-}
-.consultation .foto {
-  background: url("../images/formbbgirl.png") no-repeat center/contain;
-  width: 800px;
-  height: 340px;
+.consultation .consultation__container .consultation__form .foto {
   position: absolute;
-  z-index: 200;
-  top: -9%;
-  left: 30%;
+  z-index: 50;
+  background: url(../images/consultation/girlBg.png) no-repeat center/cover;
+  border-radius: 154px;
+  left: 40%;
+  width: 644px;
+  height: 336px;
 }
+@media screen and (max-width: 1280px) {
+  .consultation .consultation__container .consultation__form .foto {
+    left: 36%;
+  }
+}
+.consultation .consultation__container .consultation__form .consultation__bg_right {
+  position: relative;
+  z-index: 45;
+  background: url(../images/consultation/bgRight.png) no-repeat left/cover;
+  width: 539px;
+  height: 283px;
+}
+
 .footer {
   background: url("../images/bg-footer.png") no-repeat center/cover;
   padding: 0px 0 10px;
@@ -1912,6 +1949,7 @@ a {
   display: inline-block;
   font-weight: 700;
   font-size: 20px;
+  font-style: normal;
   color: #fff;
 }
 .footer__wrapper-company .footer__address p .grey {

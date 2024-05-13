@@ -157,6 +157,7 @@
         display: inline-block;
         font-weight: 700;
         font-size: 20px;
+        font-style: normal;
         color: #fff;
 
         .grey {
@@ -174,7 +175,6 @@
   &__wrapper-contact {
     position: relative;
     grid-area: cont;
-    //background: #b4eded;
     display: flex;
     justify-content: flex-end;
 

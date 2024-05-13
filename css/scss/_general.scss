@@ -19,7 +19,7 @@ body {
 * {
   box-sizing: border-box;
 
-  // outline: 1px solid coral !important;
+   //outline: 1px solid coral !important;
 }
 
 h1,
@@ -185,4 +185,17 @@ a {
     width: 80px;
     height: 6px;
   }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
