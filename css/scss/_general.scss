@@ -161,8 +161,8 @@ a {
     height: 6px;
   }
 
-  @media #{tablet-mini} {
-    width: 80px;
+  @media #{$tablet-mini} {
+    width: 68px;
     height: 6px;
   }
 }
@@ -181,8 +181,8 @@ a {
     height: 6px;
   }
 
-  @media #{tablet-mini} {
-    width: 80px;
+  @media #{$tablet-mini} {
+    width: 68px;
     height: 6px;
   }
 }

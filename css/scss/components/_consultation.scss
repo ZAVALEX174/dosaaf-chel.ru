@@ -1,6 +1,10 @@
 .consultation {
   padding: 52px 0 94px;
 
+  @media #{$laptop_s} {
+    padding: 38px 0 46px;
+  }
+
   .consultation__container {
     padding: 122px 0 122px 61px ;
     //background: url("../images/consultation/bg-usor.svg") no-repeat left/contain;
@@ -10,6 +14,14 @@
     position: relative;
     z-index: 800;
 
+    @media #{$laptop_s} {
+      padding: 122px 0 122px 0;
+    }
+
+    @media #{$tablet} {
+      padding: 38px 0 46px 0;
+    }
+
     .consultation__bg {
       position: absolute;
       background: url("../images/consultation/bg-usor.svg") no-repeat left/contain;
@@ -18,6 +30,24 @@
       width: 668px;
       height: 558px;
       z-index: 900;
+
+      @media #{$laptop_s} {
+        max-width: 668px;
+        width: 100%;
+        height: 100%;
+        top: -30px;
+      }
+
+      @media #{$tablet} {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      @media #{$phone} {
+        top: 0;
+        height: 280px;
+        z-index: 0;
+      }
     }
 
     .consultation__form {
@@ -34,6 +64,14 @@
       border: 1px solid green;
       //height: 238px;
 
+      @media #{$laptop_s} {
+        padding: 28px 15px 19px 15px;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background: url("../images/consultation/mobileBg.png") no-repeat center / cover;
+      }
+
       form {
         position: relative;
         z-index: 1000;
@@ -41,10 +79,15 @@
         flex-direction: column;
         width: 100%;
 
+        @media #{$laptop_s} {
+          justify-content: center;
+          align-items: center;
+        }
+
         label {
           display: block;
           font-weight: 400;
-          font-size: 50px;
+          font-size: clamp(35px, 2.6vw, 50px);
           text-transform: uppercase;
           color: #fff;
           margin-bottom: 12px;
@@ -52,7 +95,7 @@
           span {
             font-family: $font-family-base;
             font-weight: 400;
-            font-size: 50px;
+            font-size: clamp(35px, 2.6vw, 50px);
             text-transform: uppercase;
             color: #34c3ff;
           }
@@ -65,6 +108,7 @@
           border: none;
           border-radius: 10px;
           //backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
           background: rgba(187, 231, 255, 0.1);
           max-width: 714px;
           margin: 0;
@@ -79,6 +123,18 @@
           @media #{$notebook_s} {
             width: 568px;
           }
+
+          @media #{$laptop_s} {
+            max-width: 568px;
+            width: 100%;
+            padding: 9px 21px;
+          }
+        }
+
+        input:nth-of-type(2) {
+          @media #{$laptop_s} {
+            margin-bottom: 200px;
+          }
         }
 
         input::before {
@@ -90,22 +146,50 @@
           backdrop-filter: blur(15px);
         }
 
-        .span-warning {
-          display: inline-block;
-          max-width: 330px;
-          font-family: $font-family-title;
-          font-weight: 500;
-          font-size: 12px;
-          text-align: right;
-          color: #eef2f9;
-          margin-left: 155px;
-          margin-right: 23px;
-        }
+        .wrapper__link {
+          max-width: 715px;
+          display: flex;
+          justify-content: flex-end;
 
-        a {
-          display: inline-flex;
-          align-items: center;
-          max-width: 200px;
+          @media #{$notebook_s} {
+            max-width: 568px;
+          }
+
+          @media #{$laptop_s} {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 10px;
+          }
+
+          .span-warning {
+            display: inline-block;
+            max-width: 330px;
+            font-family: $font-family-title;
+            font-weight: 500;
+            font-size: 12px;
+            text-align: right;
+            color: #eef2f9;
+            margin-right: 23px;
+
+            @media #{$laptop_s} {
+              margin-left: 0;
+              margin-right: 0;
+              text-align: center;
+            }
+          }
+
+          a {
+            padding-left: 32px;
+            display: inline-flex;
+            align-items: center;
+            max-width: 200px;
+            justify-content: center;
+
+            svg {
+              margin-left: 14px;
+            }
+          }
         }
       }
 
@@ -113,8 +197,9 @@
         position: absolute;
         z-index: 50;
         //margin-left: -64%;
-        background: url(../images/consultation/girlBg.png) no-repeat center / cover;
+        background: url("../images/consultation/girlBg.png") no-repeat center/cover;
         border-radius: 154px;
+        top: 100px;
         left: 40%;
         width: 644px;
         height: 336px;
@@ -123,17 +208,26 @@
         @media #{$notebook_s} {
           left: 36%;
         }
+
+        @media #{$laptop_s} {
+          //display: none;
+          border-radius: 10px;
+          left: 50%;
+          transform: translateX(-50%);
+          top: 47%;
+          width: 320px;
+          height: 156px;
+          z-index: 11000;
+        }
       }
 
       .consultation__bg_right {
         position: relative;
         z-index: 45;
-        background: url(../images/consultation/bgRight.png) no-repeat left / cover;
-        width: 539px;
+        background: url("../images/consultation/bgRight.png") no-repeat left / cover;
+        max-width: 539px;
         height: 283px;
       }
     }
-
-
   }
 }

@@ -46,7 +46,7 @@
     }
 
     @media #{$laptop_s} {
-      grid-template-columns: 130px 1fr;
+      grid-template-columns: 64px 1fr;
       border-radius: 0;
     }
 
@@ -148,15 +148,16 @@
 
     @media #{$laptop_s} {
       display: flex;
+      left: 90px;
     }
 
     @media #{$tablet-mini} {
-      left: 136px;
+      left: 69px;
       bottom: 16px;
     }
 
     @media #{$phone} {
-      left: 78px;
+      left: 69px;
       bottom: 20px;
     }
 
@@ -193,7 +194,7 @@
       display: inline-block;
       margin-right: 10px;
 
-      @media #{$phone} {
+      @media #{$laptop_s} {
         width: 54px;
         height: 54px;
       }
@@ -214,6 +215,10 @@
 
       @media #{$laptop} {
         font-size: 16px;
+
+        @media #{$laptop_s} {
+          left: 64px;
+        }
 
         @media #{$phone} {
           font-size: 14px;

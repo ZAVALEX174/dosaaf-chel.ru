@@ -52,7 +52,6 @@
       @media #{$laptop_s} {
         display: none;
       }
-
     }
 
     .swiper-button-prev::after{
@@ -103,6 +102,17 @@
               transform: translateY(-20px);
               transition: 0.9s linear;
             }
+          }
+
+          .swiper-slide::after {
+            position: absolute;
+            z-index: 200000000;
+            content: '';
+            bottom: 10px;
+            left: -11px;
+            right: -8px;
+            height: 50px;
+            background-image: url("../images/consultation/ten.png");
           }
         }
       }
