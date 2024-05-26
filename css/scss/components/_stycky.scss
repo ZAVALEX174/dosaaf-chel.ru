@@ -1,0 +1,19 @@
+
+  .sticky {
+    //margin-top: 340px;
+    //margin-top: 600px;
+    margin-left: auto;
+    position: sticky;
+    top: 300px;
+    //bottom: 340px;
+    width: 600px;
+    height: 635px;
+    background-image: url("../images/slider-servises/usor.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    z-index: 5;
+    overflow-y: auto;
+  }
+
+
+

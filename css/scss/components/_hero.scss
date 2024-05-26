@@ -4,7 +4,8 @@
   overflow: hidden;
   position: relative;
   display: flex;
-  margin-top: -7px;
+  margin-top: 0;
+  background: rgba(4, 11, 24, 0.3);
 
   .hero-slider__wrapper {
     position: relative;
@@ -45,15 +46,16 @@
 
         @media #{$phone} {
           justify-content: flex-end;
-          padding-bottom: 56px;
+          padding-bottom: 60px;
         }
       }
 
       .hero-slider__card {
+        padding-left: 20px;
         display: flex;
         height: 100%;
         flex-direction: column;
-        width: 90%;
+        width:60%;
         justify-content: flex-end;
 
         @media #{$desktop} {
@@ -70,6 +72,8 @@
 
         @media #{$tablet} {
           padding-left: 0;
+          width: 100%;
+
         }
 
         h2 {
@@ -120,6 +124,7 @@
 
         a {
           color: #34c3ff;
+          font-size: 24px;
           display: inline-block;
           align-self: flex-start;
           max-width: 200px;
@@ -136,20 +141,21 @@
       align-items: center;
       justify-content: center;
       //margin: 0 20px;
+      column-gap: 14px;
     }
   }
 
   .swiper-pagination-bullet {
     margin: 0 15px;
-    width: 16px;
-    height: 16px;
+    width: 11px;
+    height: 11px;
     background: #fff;
   }
 
   .swiper-pagination-bullet-active {
     border: 2px solid #56a2e9;
-    width: 20px;
-    height: 20px;
+    width: 19px;
+    height: 19px;
     background: none;
   }
 
@@ -157,9 +163,10 @@
     width: 55px;
     height: 55px;
     position: absolute;
-    top: 50%;
-    left: 2%;
+    top: 49%;
+    left: 4%;
     z-index: 50;
+    transition: 0.3s ease-in;
 
     @media #{$desktop} {
       left: 1%;
@@ -167,6 +174,29 @@
 
     @media #{$laptop_s} {
       display: none;
+    }
+
+    svg {
+      circle{
+        stroke: #6f7279;
+      }
+
+      path {
+        fill: #6f7279;
+      }
+    }
+  }
+
+  .swiper-button-prev:hover {
+    transition: 0.3s ease-in;
+    svg {
+      circle{
+        stroke: #56a2e9;
+      }
+
+      path {
+        fill: #56a2e9;
+      }
     }
   }
 
@@ -181,9 +211,33 @@
     top: 50%;
     right: 4%;
     z-index: 50;
+    transition: 0.3s ease-in;
 
     @media #{$laptop_s} {
       display: none;
+    }
+
+    svg {
+      circle{
+        stroke: #6f7279;
+      }
+
+      path {
+        fill: #6f7279;
+      }
+    }
+  }
+
+  .swiper-button-next:hover {
+    transition: 0.3s ease-in;
+    svg {
+      circle{
+        stroke: #56a2e9;
+      }
+
+      path {
+        fill: #56a2e9;
+      }
     }
   }
 

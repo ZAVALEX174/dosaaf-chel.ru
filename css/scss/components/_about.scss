@@ -1,5 +1,27 @@
 .about {
-  padding: 60px 0 60px;
+  padding: 40px 0 60px;
+
+  @media #{$phone} {
+    padding: 20px 0 30px;
+  }
+
+  .about__img-mobile {
+    display: none;
+    width: 100%;
+    height: auto;
+
+    @media #{$tablet} {
+      display: block;
+      margin-bottom: 45px;
+      margin-top: -60px;
+    }
+
+    img {
+      width: 100%;
+      //height: 100%;
+      object-fit: contain;
+    }
+  }
 
   .about__container {
     max-width: 1520px;
@@ -12,18 +34,21 @@
       align-items: center;
     }
 
+
+
     .about__title {
       align-self: center;
+      margin-bottom: 26px;
     }
 
     .about__wrapper {
-      max-width: 63%;
+      max-width: 69%;
       position: relative;
 
       article {
         position: relative;
         z-index: 111;
-        margin-bottom: 20px;
+        margin-bottom: 27px;
 
         @media #{$tablet} {
           text-align: start;
@@ -50,18 +75,19 @@
       }
 
       .about__btn {
+        margin-top: 27px;
         display: inline-flex;
         background: transparent;
         align-items: center;
-        text-align: center;
         font-weight: 700;
         font-size: 20px;
         color: #244f77;
         transition: 0.3s ease-in;
         cursor: pointer;
         position: relative;
-        z-index: 200;
+        z-index: 150;
         border: 1px solid #d2d7df;
+        width: 200px;
 
         svg {
           color: #56a2e9;
@@ -72,7 +98,20 @@
           width: 100%;
           display: inline-flex;
           justify-content: center;
+          margin-top: 0;
         }
+      }
+
+      .about__btn::after {
+        position: absolute;
+        content: '';
+        top: 50%;
+        transform: translateY(-50%);
+        right: 21px;
+        background-image: url("../images/btn-arr-right.svg");
+        background-repeat: no-repeat;
+        width: 14px;
+        height: 14px;
       }
 
       .about__btn:hover {
@@ -89,7 +128,7 @@
         flex-direction: column;
         max-width: 100%;
         text-align: center;
-        padding-top: 400px;
+        padding-top: 0;
       }
     }
 
@@ -98,8 +137,8 @@
       position: absolute;
       width: 1033px;
       height: 100%;
-      top: 0;
-      right: calc(100% - 29%);
+      top: -2%;
+      right: calc(100% - 34%);
       /* left: 0; */
       background-image: url('../images/bg-about.png');
       /* background-position: 0 0; */
@@ -124,13 +163,16 @@
       }
 
       @media #{$tablet} {
+        display: none;
         max-width: 999px;
         height: 400px;
+        background-image: none;
         background-position: center;
         background-size: cover;
         top: -2%;
         right: 0;
-        left: 0;
+        left: -10px;
+        width: calc(100% + 20px);
       }
     }
   }

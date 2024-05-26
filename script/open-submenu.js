@@ -7,6 +7,7 @@ console.log(visHidden)
 
 submenuBtn.addEventListener('mouseover', () => {
     backDropMenu.classList.remove('visually-hidden');
+    // backDropMenu.style.backdropFilter = 'blur(100px)';
     // backDropMenu.style.display = 'flex';
     // backDropMenu.style.bottom = '-270px';
     // headerContainer.classList.remove('header__container');
@@ -19,7 +20,7 @@ headerMenu.addEventListener('mouseleave', () => {
     backDropMenu.classList.add('visually-hidden');
     // backDropMenu.style.display = 'none';
     headerContainer.classList.remove('header__container_rectangle');
-    // headerContainer.classList.add('header__container');
+    headerContainer.classList.add('header__container');
     // headerContainer.style.borderRadius = '20px';
     // backDropMenu.style.bottom = '0';
 

@@ -1,0 +1,218 @@
+.servises-page {
+  margin-top: -50px;
+  //margin-top: 53px;//для проверки отступов
+  padding-bottom: 46px;
+  z-index: 505;
+
+  @media #{$phone} {
+    padding-bottom: 0;
+  }
+
+  .servises-page__container {
+
+      @media #{$phone} {
+        .container {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+
+    .servises-page__btn {
+      display: none;
+    }
+
+    .servises-page__title {
+      margin-bottom: 0;
+
+        @media #{$phone} {
+          margin-top: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+    }
+
+    //.h1__left{
+    //  @media #{$phone} {
+    //    display: none;
+    //  }
+    //}
+
+
+    .swiper-servises-page {
+      margin-bottom: 0;
+      height: 310px;
+
+      @media #{$phone} {
+        margin-bottom: 30px;
+        padding-top: 20px;
+      }
+      margin-bottom: 30px;
+      padding-top: 20px;
+
+      .servises-page__swiper-wrapper {
+
+        .servises-page__swiper-slide {
+          height: 300px;
+
+          .servises-page__slide-box {
+
+            img {
+              padding-top: 10px;
+            }
+          }
+
+          .box-hover {
+            margin-top: -20px;
+          }
+
+          .servises-blur {
+            margin-top: -20px;
+          }
+        }
+
+
+          @media #{$phone} {
+            .servises-page__swiper-slide:not(:nth-child(2)) {
+              display: none;
+
+            }
+
+          }
+
+      }
+    }
+  }
+}
+
+.servises__desc {
+
+  h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1;
+    color: #21496f;
+    margin-bottom: 32px;
+
+    @media #{$tablet-mini} {
+      font-size: 34px;
+    }
+
+    @media #{$phone} {
+      font-size: 30px;
+    }
+  }
+
+  article {
+    margin-bottom: 10px;
+    font-family: $font-family-title, sans-serif;
+
+    .title-desc {
+      //margin-bottom: 18px;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #45484b;
+      //margin-bottom: 30px;
+      padding-bottom: 5px;
+
+      em {
+        font-weight: 700;
+        font-size: 18px;
+        color: #363942;
+        font-style: normal;
+        //margin-bottom: 40px;
+      }
+    }
+  }
+
+  article:last-of-type {
+    margin-bottom: 25px;
+  }
+  .servises__desc-wrapper {
+    max-width: 770px;
+    margin-bottom: 40px;
+    padding-left: 20px;
+
+    .servises__desc-list {
+      display: flex;
+      flex-direction: column;
+      font-family: $font-family-title, sans-serif;
+      font-weight: 600;
+      line-height: 2.5;
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      row-gap: 10px;
+
+      .servises__desc-item {
+        padding: 0;
+        margin: 0;
+
+        .servises__desc-link {
+          position: relative;
+          display: inline-flex;
+          align-items: center;
+          color: #244f77;
+          padding-left: 33px;
+          //background-color: #c0e40d;
+        }
+
+        .servises__desc-link:hover {
+          color: #34C3FF;
+        }
+
+        .servises__desc-link::before {
+          position: absolute;
+          content: '';
+          top: 50%;
+          transform: translateY(-50%);
+          left: 0;
+          width: 12px;
+          height: 12px;
+          background-image: url("../images/btn-arr-right.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          margin-right: 21px;
+
+          @media #{$tablet-mini} {
+              top: 21px;
+            }
+        }
+
+        .servises__desc-link:hover::before {
+          //color: #34C3FF;
+          background-image: url("../images/arr-right-active.svg");
+        }
+      }
+    }
+  }
+}
+
+
+.consultation__servises {
+  padding: 64px 0 42px;
+
+  @media #{$phone} {
+    padding: 64px 0 0;
+  }
+
+  .consultation__container-servises {
+    padding: 91px 0 122px 0;
+
+    @media #{$phone} {
+      padding: 0 0 106px 0;
+    }
+  }
+
+  .consultation__bg-servisespage {
+    @media #{$phone} {
+      top: -19px;
+      height: 296px;
+    }
+  }
+}
